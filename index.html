@@ -3,6 +3,15 @@
 </head>
 
 Client Bot - Commands v1.0
+<table id="commandsTable">
+ <thead>
+  <th>Command</th>
+  <th>Description</th>
+ </thead>
+ <tbody>
+  
+ </tbody>
+</table>
 
 
 <textarea style="height: 50%; width: 50%">
@@ -16,25 +25,81 @@ Client Bot - Commands v1.0
 ### Changed
  - Improved `autokick` functionality by improving response messages and command structure
 </textarea>
-app [ID] - Opens an app with the id, displays on the userlist like: (>ID) Mobster
-autokick - Add a user to be autokicked when they join the room
-awayblock - Permanently displays the away icon on your pawn
-clear - Clears the chat
-fake42 - Brings a fake xat (42) account to the room
-google - not working
-ignore [USER] - Add a user to the ignore list. Doing this command again will remove the user if they are already on the list
-pcalc [Power ID] - Calculate the section and subid of a power
-promo - not working
-reverse [Message] - Send a message in revers
-setuname [USER] [New Name] - Change a user's display name
-sing - Sing 'Never give you up' (Working on using elyrics for whatever song)
-smilies [ON/OFF] - When disabled, smilies in the format of (cool) will be shown as [cool] (Reduces lag)
-spoofmessage [USER] [Message] - Receive a spoofed message from a user
-spoofpc [USER] [Message] - Receive a spoofed pc from a user
-ticklespam - testing
-users - display user count
-youtube - not working
-
 <script>
- alert('test');
+ $(function() {
+   var commandsList = {
+    'app': [
+      '- Clears the current app, removing the (>NUMBER) from your name.',
+      '[NUMBER] - Opens the app with that NUMBER. It will be displayed on the userlist like: (>NUMBER) Mobster. Note: The number must be large enough (~6 digits) for it to appear on the userlist.',
+      '[NUMBER1] [NUMBER2] - Cycles your app number between NUMBER1 and NUMBER2. Your name will appear on the userlist as: (>NUMBER1) Mobster, then after a brief second, it will change to: (>NUMBER2) Mobster, and then repeat from there.',
+      'flash - Flashes the chat. Note: Do not use'
+      ],
+    'autokick': [
+      'add [USER]- Add a user to be autokicked when they join the room. Note: they must be in the room.',
+      'remove [USER] - Remove a user from the autokick list.'
+    ],
+    'pawn': [
+      'Note: finish description.'
+    
+    ],
+    'clear': [
+      'Clear the chat messages.'
+    ],
+    'fake42': [
+      'Brings a fake xat (42) account to the room. Note: Pointless.'
+    ],
+    'google': [
+      '[Search] - Search on google and return the results.',
+      'Note: Not working.'
+    ],
+    'ignore': [
+      '[USER] - Add a user to the ignore list. Doing this command again will remove the user if they are already on the list.',
+      'Note: Improve command to use add/remove.'
+    ],
+    'pcalc': [
+      '[Power ID] - Calculate the section and subid of a power.',
+      'Note: Fix so it sends via pMessage.'
+    ],
+    'promo': [
+      'Get a list of the currently promoted chats.',
+      'Note: Not working.'
+    ],
+    'reverse': [
+      '[Message] - Send a message in reverse.'
+    ],
+    'setuname': [
+     '[USER] [New Name] - Change a user\'s display name in the chat.'
+    ],
+     'sing - Sing \'Never give you up\'.',
+     'Note: Improve to use elyrics and a stop switch.'
+   ],
+   'smilies':
+     '[ON/OFF] - When disabled, smilies in the format of (cool) will be shown as [cool] (Reduces lag).'
+   ]
+  };
+   'spoofmessage': [
+     '[USER] [Message] - Receive a spoofed message from a user.'
+   ],
+   'spoofpc': [
+     '[USER] [Message] - Receive a spoofed pc from a user.'
+   ],
+   'ticklespam: [
+     '- testing.'
+   ],
+   'users': [
+     '- display user count.'
+   ],
+   'youtube': [
+     '- not working.'
+   ]
+  
+  
+  for(var commandName in commandsList) {
+    print(commandName);
+    
+  }
+  
+  
+  
+ });
 </script>
