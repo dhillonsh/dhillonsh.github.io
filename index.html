@@ -98,7 +98,7 @@ Client Bot - Commands v1.0
       commandsList[commandName][index] = commandName + " " + commandsList[commandName][index];
     }
     var htmlContent = '<tr><td>' + commandName + '</td>';
-    htmlContent += '<td>' + commandName + " " + commandsList[commandName].join('<br>') + '</td>';
+    htmlContent += '<td>' + commandsList[commandName].join('<br>') + '</td>';
     htmlContent += '</tr>';
     $('#commandsTable > tbody').append(htmlContent);
   }
