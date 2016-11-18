@@ -39,8 +39,7 @@ Client Bot - Commands v1.0
       'remove [USER] - Remove a user from the autokick list.'
     ],
     'pawn': [
-      'Note: finish description.'
-    
+      '[away/typing] [ON/OFF] - Turn the specified pawn on or off.'
     ],
     'clear': [
       'Clear the chat messages.'
@@ -96,7 +95,7 @@ Client Bot - Commands v1.0
   
   for(var commandName in commandsList) {
     var htmlContent = '<tr><td>' + commandName + '</td>';
-    htmlContent += '<td>' + commandsList[commandName].join('<br>') + '</td>';
+    htmlContent += '<td>' + commandName + " " + commandsList[commandName].join('<br>') + '</td>';
     htmlContent += '</tr>';
     $('#commandsTable > tbody').append(htmlContent);
   }
