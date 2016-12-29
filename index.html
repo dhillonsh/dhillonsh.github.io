@@ -25,6 +25,9 @@ Client Bot - Changelog<br>
 ### Fixed
  - Fixed issue with `pawn typing off` never disabling
 
+### Changed
+ - Modified `turn showchat` subcommands to include off/all/nofollow
+ 
 ## [0.0.2] - 2016-11-23
 ### Added
  - Added `tickleresponse` command
@@ -111,8 +114,10 @@ Client Bot - Changelog<br>
      '[Message] - Sets the automatic tickle message that will be sent (VIA PM) when someone tickles you.'
     ],
    'turn': [
-     '[showchat] [ON/OFF]',
-     'showchat [ON/OFF] - When enabled, it will display what chat you are on when clicked. When disabled, it will display "NoFollow" when someone clicks you.'
+     '[showchat] [off/all/nofollow]',
+     'showchat off - Reverts to the default message xat will show when a user clicks you.',
+     'showchat all - Will display the message "has you added as a friend and is online at ..." when any user clicks you. All users will appear to be added as your friends.',
+     'showchat nofollow - Will display "NoFollow" whenever any user clicks you.'
    ],
    'users': [
      '- display user count.'
