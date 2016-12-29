@@ -21,13 +21,15 @@ Client Bot - Changelog<br>
 ## [0.1.0] - 2016-12-23
 ### Added
  - Added a database so most settings should be saved on chat rejoin
+ - Added `site` command that just returns the address to this site
 
 ### Fixed
  - Fixed issue with `pawn typing off` never disabling
 
 ### Changed
  - Modified `turn showchat` subcommands to include off/all/nofollow
- 
+ - Modified app command to allow it to open apps infinitely until stopped. Modified sub commands as well
+
 ## [0.0.2] - 2016-11-23
 ### Added
  - Added `tickleresponse` command
@@ -56,7 +58,7 @@ Client Bot - Changelog<br>
  $(function() {
    var commandsList = {
     'app': [
-      '- Clears the current app, removing the (>NUMBER) from your name.',
+      'stop - Clears the current app, removing the (>NUMBER) from your name.',
       '[NUMBER] - Opens the app with that NUMBER. It will be displayed on the userlist like: (>NUMBER) Mobster. Note: The number must be large enough (~6 digits) for it to appear on the userlist.',
       '[NUMBER1] [NUMBER2] - Cycles your app number between NUMBER1 and NUMBER2. Your name will appear on the userlist as: (>NUMBER1) Mobster, then after a brief second, it will change to: (>NUMBER2) Mobster, and then repeat from there.',
       'flash - Flashes the chat. Note: Do not use'
@@ -96,6 +98,9 @@ Client Bot - Changelog<br>
     'sing': [
      'sing - Sing \'Never give you up\'.',
      'Note: Improve to use elyrics and a stop switch.'
+   ],
+   'site': [
+     'site - Returns the address to this URL.'
    ],
    'smilies': [
      '[ON/OFF] - When disabled, smilies in the format of (cool) will be shown as [cool] (Reduces lag).'
