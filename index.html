@@ -24,6 +24,7 @@ Client Bot - Changelog<br>
  - Added `site` command that just returns the address to this site
  - Added `turn pgo` sub-command to autocatch pokemon on PGO.
  - Added `turn pgo type` sub-comand to specify how to send the `!pgo catch` message (main, pc, pm)
+ - Added `turn pgo delay` sub-command to specify how long to wait before sending the `!pgo catch` message
 
 ### Fixed
  - Fixed issue with `pawn typing off` never disabling
@@ -133,6 +134,7 @@ Client Bot - Changelog<br>
    'turn': [
      '[pgo] [ON/OFF] - Turn ON/OFF PGO Autocatching',
      'pgo type [main/pc/pm] - Changes how the `!pgo catch` message is sent to the bot (Main Chat, PC, or PM).',
+     'pgo delay [time in seconds] - The amount of time in seconds to wait before sending the `!pgo catch` message once a pokemon appears.',
      '[showchat] [off/all/nofollow]',
      'showchat off - Reverts to the default message xat will show when a user clicks you.',
      'showchat all - Will display the message "has you added as a friend and is online at ..." when any user clicks you. All users will appear to be added as your friends.',
