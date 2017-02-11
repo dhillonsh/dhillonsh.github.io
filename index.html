@@ -18,6 +18,23 @@ Client Bot - Commands
 <span>
 Client Bot - Changelog<br>
 <textarea style="height: 100%; width: 50%">
+## [1.0.0] - 2017-2-11
+### Summary
+ - Released new client
+
+### Fixed
+ - Fixed `google` command
+ - Fixed some links from the `youtube` command not sending due to character encoding issues
+
+### Changed
+ - Moved `turn pgo` subcommand to its own command: `pgo`
+ - Improved `sing` command to sit any song given an artist and song name
+ 
+### Added
+ - Added `lureall` subcommand to `pgo`
+ - Added `copy` command
+ - Added `steal` command
+
 ## [0.1.0] - 2016-12-23
 ### Added
  - Added a database so most settings should be saved on chat rejoin
@@ -68,97 +85,105 @@ Client Bot - Changelog<br>
 	- The command code for commands is @ and any message you send starting with @ will not be sent to anybody, only you will see it.
 </textarea>
 <script>
- $(function() {
-   var commandsList = {
-    'app': [
-      'stop - Clears the current app, removing the (>NUMBER) from your name.',
-      '[NUMBER] - Opens the app with that NUMBER. It will be displayed on the userlist like: (>NUMBER) Mobster. Note: The number must be large enough (~6 digits) for it to appear on the userlist.',
-      '[NUMBER1] [NUMBER2] - Cycles your app number between NUMBER1 and NUMBER2. Your name will appear on the userlist as: (>NUMBER1) Mobster, then after a brief second, it will change to: (>NUMBER2) Mobster, and then repeat from there.',
-      'flash - Flashes the chat. Note: Do not use'
-      ],
-    'autokick': [
-      'add [USER]- Add a user to be autokicked when they join the room. Note: they must be in the room.',
-      'remove [USER] - Remove a user from the autokick list.'
-    ],
-    'pawn': [
-      '[away/typing] [ON/OFF] - Turn the specified pawn on or off.'
-    ],
-    'clear': [
-      'Clear the chat messages.'
-    ],
-    'fake42': [
-      'Brings a fake xat (42) account to the room. Note: Pointless.'
-    ],
-    'google': [
-      '[Search] - Search on google and return the results.',
-      'Note: Not working.'
-    ],
-    'ignore': [
-      '[add/remove] [USER] - Add or remove a user from the ignore list'
-    ],
-    'pcalc': [
-      '[Power ID] - Calculate the section and subid of a power.'
-    ],
-    'promo': [
-      'Get a list of the currently promoted English chats.'
-    ],
-    'reverse': [
-      '[Message] - Send a message in reverse.'
-    ],
-    'setuname': [
-     '[USER] [New Name] - Change a user\'s display name in the chat.'
-    ],
-    'sing': [
-     'sing - Sing \'Never give you up\'.',
-     'Note: Improve to use elyrics and a stop switch.'
-   ],
-   'site': [
-     'site - Returns the address to this URL.'
-   ],
-   'smilies': [
-     '[ON/OFF] - When disabled, smilies in the format of (cool) will be shown as [cool] (Reduces lag).'
-   ],
-   'spoofmessage': [
-     '[USER] [Message] - Receive a spoofed message from a user.'
-   ],
-   'spoofpc': [
-     '[USER] [Message] - Receive a spoofed pc from a user.'
-   ],
-   'ticklespam': [
-     '- testing.'
-   ],
-   'tickleresponse': [
-     '[ON/OFF] - When enabled, anyone who tickles you will receive your automatic tickle response message (VIA PM).',
-     '[Message] - Sets the automatic tickle message that will be sent (VIA PM) when someone tickles you.'
-    ],
-   'turn': [
-     '[pgo] [ON/OFF] - Turn ON/OFF PGO Autocatching',
-     'pgo type [main/pc/pm] - Changes how the `!pgo catch` message is sent to the bot (Main Chat, PC, or PM).',
-     'pgo delay [time in seconds] - The amount of time in seconds to wait before sending the `!pgo catch` message once a pokemon appears.',
-     '[showchat] [off/all/nofollow]',
-     'showchat off - Reverts to the default message xat will show when a user clicks you.',
-     'showchat all - Will display the message "has you added as a friend and is online at ..." when any user clicks you. All users will appear to be added as your friends.',
-     'showchat nofollow - Will display "NoFollow" whenever any user clicks you.'
-   ],
-   'users': [
-     '- display user count.'
-   ],
-   'youtube': [
-     '- not working.'
-   ]
-   };
-  
-  for(var commandName in commandsList) {
-    for(var index = 0; index < commandsList[commandName].length; index++) {
-      commandsList[commandName][index] = commandName + " " + commandsList[commandName][index];
-    }
-    var htmlContent = '<tr><td>' + commandName + '</td>';
-    htmlContent += '<td>' + commandsList[commandName].join('<br>') + '</td>';
-    htmlContent += '</tr>';
-    $('#commandsTable > tbody').append(htmlContent);
-  }
-  
-  
-  
- });
+$(function() {
+	var commandsList = {
+		'app': [
+			'stop - Clears the current app, removing the (>NUMBER) from your name.',
+			'[NUMBER] - Opens the app with that NUMBER. It will be displayed on the userlist like: (>NUMBER) Mobster. Note: The number must be large enough (~6 digits) for it to appear on the userlist.',
+			'[NUMBER1] [NUMBER2] - Cycles your app number between NUMBER1 and NUMBER2. Your name will appear on the userlist as: (>NUMBER1) Mobster, then after a brief second, it will change to: (>NUMBER2) Mobster, and then repeat from there.',
+			'flash - Flashes the chat. Note: Do not use'
+		],
+		'autokick': [
+			'add [USER]- Add a user to be autokicked when they join the room. Note: they must be in the room.',
+			'remove [USER] - Remove a user from the autokick list.'
+		],
+		'pawn': [
+			'[away/typing] [ON/OFF] - Turn the specified pawn on or off.'
+		],
+		'clear': [
+			'Clear the chat messages.'
+		],
+		'copy': [
+			'[regname/id] - Copies the user\'s name/status/homepage.'
+			'uncopy - Return back to your original name.'
+			'Note:  Your name will not appear to be changed on your screen but everyone else will see your copied name. But you will see a new fake user appear in the chat on the xat (42) account with a black pawn. This user will show you what everyone else sees as your name.
+		],
+		'fake42': [
+			'Brings a fake xat (42) account to the room. Note: Pointless.'
+		],
+		'google': [
+			'[Search] - Search on google and return the results.',
+		],
+		'ignore': [
+			'[add/remove] [USER] - Add or remove a user from the ignore list'
+		],
+		'pcalc': [
+			'[Power ID] - Calculate the section and subid of a power.'
+		],
+		'promo': [
+			'Get a list of the currently promoted English chats.'
+		],
+		'reverse': [
+			'[Message] - Send a message in reverse.'
+		],
+		'setuname': [
+			'[USER] [New Name] - Change a user\'s display name in the chat.'
+		],
+		'sing': [
+			'[Arist Name] [Song Name] - Sings a song given an artist and song name, pulled from elyrics.net',
+			'Note: You MUST include the brackets for this command.'
+		],
+		'site': [
+			'site - Returns the address to this URL.'
+		],
+		'smilies': [
+			'[ON/OFF] - When disabled, smilies in the format of (cool) will be shown as [cool] (Reduces lag).'
+		],
+		'spoofmessage': [
+			'[USER] [Message] - Receive a spoofed message from a user.'
+		],
+		'spoofpc': [
+			'[USER] [Message] - Receive a spoofed pc from a user.'
+		],
+		'steal': [
+			'[Name, avatar, homepage, relation, status, statusglow, statuscolor, pcback] [Regname/ID] - Steal the user\'s information.',
+			'Note: The user must be in the current room.'
+		],
+		'ticklespam': [
+			'- testing.'
+		],
+		'tickleresponse': [
+			'[ON/OFF] - When enabled, anyone who tickles you will receive your automatic tickle response message (VIA PM).',
+			'[Message] - Sets the automatic tickle message that will be sent (VIA PM) when someone tickles you.'
+		],
+		'turn': [
+			'[showchat] [off/all/nofollow]',
+			'showchat off - Reverts to the default message xat will show when a user clicks you.',
+			'showchat all - Will display the message "has you added as a friend and is online at ..." when any user clicks you. All users will appear to be added as your friends.',
+			'showchat nofollow - Will display "NoFollow" whenever any user clicks you.'
+		],
+		'pgo': [
+			'[ON/OFF] - Turn ON/OFF PGO Autocatching',
+			'type [main/pc/pm] - Changes how the `!pgo catch` message is sent to the bot (Main Chat, PC, or PM).',
+			'delay [time in seconds] - The amount of time in seconds to wait before sending the `!pgo catch` message once a pokemon appears.',
+			'lureall - You will lure every chat you are currently at.'
+		],
+		'users': [
+			'- display user count.'
+		],
+		'youtube': [
+			'[Search] - Search on youtube and return the results.'
+		]
+		};
+	
+	for(var commandName in commandsList) {
+		for(var index = 0; index < commandsList[commandName].length; index++) {
+			commandsList[commandName][index] = commandName + " " + commandsList[commandName][index];
+		}
+		var htmlContent = '<tr><td>' + commandName + '</td>';
+		htmlContent += '<td>' + commandsList[commandName].join('<br>') + '</td>';
+		htmlContent += '</tr>';
+		$('#commandsTable > tbody').append(htmlContent);
+	}
+});
 </script>
