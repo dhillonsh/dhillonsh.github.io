@@ -32,6 +32,7 @@ Client Bot - Changelog<br>
  - Added a delay option for `app [id1] [id2] [delay] command
  - Added `sing stop` subcommand to stop singing
  - Added custom commands `cmd
+ - Added `allchat` command
 
 ## [1.0.0] - 2017-2-11
 ### Summary
@@ -101,6 +102,10 @@ Client Bot - Changelog<br>
 <script>
 $(function() {
 	var commandsList = {
+		'allchat': [
+			'[pc/pm] [Message] - Send a pc/pm to every user in the chat with your message.',
+			'bump - Bump every user in the chat.'
+		],
 		'app': [
 			'stop - Clears the current app, removing the (>NUMBER) from your name.',
 			'[NUMBER] - Opens the app with that NUMBER. It will be displayed on the userlist like: (>NUMBER) Mobster. Note: The number must be large enough (~6 digits) for it to appear on the userlist.',
