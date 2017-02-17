@@ -18,27 +18,35 @@ Client Bot - Commands
 <span>
 Client Bot - Changelog<br>
 <textarea style="height: 100%; width: 50%">
+## [1.1.0] - 2017-2-16
+### Fixed
+ - Fixed some links from the `youtube` command not sending due to character encoding issues
+ - Fixed messages not appearing in chat if they contained a '&' character
+ - Fixed `copy` command not working if you included additional characters after `uncopy` or the user's regname/id
+
+### Changed
+ - Improved `copy` command to copy powers as well
+
+### Added
+ - Added a delay option for `app [id1] [id2] [delay] command
+ - Added `sing stop` subcommand to stop singing
+ - Added custom commands `cmd
+
 ## [1.0.0] - 2017-2-11
 ### Summary
  - Released new client
 
 ### Fixed
  - Fixed `google` command
- - Fixed some links from the `youtube` command not sending due to character encoding issues
- - Fixed messages not appearing in chat if they contained a '&' character
- - Fixed `copy` command not working if you included additional characters after `uncopy` or the user's regname/id
 
 ### Changed
  - Moved `turn pgo` subcommand to its own command: `pgo`
  - Improved `sing` command to sit any song given an artist and song name
- - Improved `copy` command to copy powers as well
  
 ### Added
  - Added `lureall` subcommand to `pgo`
  - Added `copy` command
  - Added `steal` command
- - Added a delay option for `app [id1] [id2] [delay] command
- - Added `sing stop` subcommand to stop singing
 
 ## [0.1.0] - 2016-12-23
 ### Added
@@ -107,6 +115,13 @@ $(function() {
 		],
 		'clear': [
 			'Clear the chat messages.'
+		],
+		'cmd': [
+			'add [new command] [response to command] - Create a custom command that is accessed the same way normal commands are.',
+			'remove [command name] - Remove a custom command.',
+			'list - Check your existing custom commands.',
+			'Note: There are tags available similar to FEXBots: /guestuser {input} - /memberuser {input} - /moduser {input} - /owneruser {input} - /pcuser {Input} - /pmuser {Input} - This will rank or PC/PM the user you specified after it.',
+			'Additional tags: /sendcmd - /bulk - /random - /clear'
 		],
 		'copy': [
 			'[regname/id] - Copies the user\'s name/status/homepage.',
