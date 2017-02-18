@@ -24,9 +24,11 @@ Client Bot - Changelog<br>
 
 ### Fixed
  - Fixed `allchat` command lowercasing input text
+ - Fixed {input} tag not working for custom commands
 
 ### Added
  - Added `cmd edit` subcommand
+ - Added {randomname}, {randomreg}, {ucount}, {randomnumber} tags to `cmd`
 
 ## [1.1.0] - 2017-2-16
 ### Fixed
@@ -137,8 +139,10 @@ $(function() {
 			'edit [existing command] [new response to command] - Change an existing custom command',
 			'remove [command name] - Remove a custom command.',
 			'list - Check your existing custom commands.',
-			'Note: There are tags available similar to FEXBots: /guestuser {input} - /memberuser {input} - /moduser {input} - /owneruser {input} - /pcuser {Input} - /pmuser {Input} - This will rank or PC/PM the user you specified after it.',
-			'Additional tags: /sendcmd - /bulk - /random - /clear'
+			'Note: There are methods available similar to FEXBots: /guestuser {input} - /memberuser {input} - /moduser {input} - /owneruser {input} - /pcuser {Input} - /pmuser {Input} - This will rank or PC/PM the user you specified after it.',
+			'Additional methods: /sendcmd - /bulk - /random - /clear',
+			'Tags: {input}, {randomname}, {randomreg}, {ucount}',
+			'Additional tags: {randomnumber} or {randomnumber:LOW-HIGH} - The first version will choose a random number between 1 and 100 while the second will choose a number between any LOW and HIGH numbers you specify'
 		],
 		'copy': [
 			'[regname/id] - Copies the user\'s name/status/homepage.',
