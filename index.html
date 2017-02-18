@@ -18,6 +18,16 @@ Client Bot - Commands
 <span>
 Client Bot - Changelog<br>
 <textarea style="height: 100%; width: 50%">
+## [x.x.x]
+### Changed
+ - Modified `cmd` command to prevent adding commands with the same name as default commands
+
+### Fixed
+ - Fixed `allchat` command lowercasing input text
+
+### Added
+ - Added `cmd edit` subcommand
+
 ## [1.1.0] - 2017-2-16
 ### Fixed
  - Fixed some links from the `youtube` command not sending due to character encoding issues
@@ -124,6 +134,7 @@ $(function() {
 		],
 		'cmd': [
 			'add [new command] [response to command] - Create a custom command that is accessed the same way normal commands are.',
+			'edit [existing command] [new response to command] - Change an existing custom command',
 			'remove [command name] - Remove a custom command.',
 			'list - Check your existing custom commands.',
 			'Note: There are tags available similar to FEXBots: /guestuser {input} - /memberuser {input} - /moduser {input} - /owneruser {input} - /pcuser {Input} - /pmuser {Input} - This will rank or PC/PM the user you specified after it.',
