@@ -36,6 +36,7 @@ Client Bot - Changelog<br>
  - Added `turn showchat disabled` setting to disable clicking PC/PM/Powers button when a user clicks your name
  - Added `allchat [kick zap mute snakeban spaceban matchban mazeban codeban slotban reverseban zipban dunce undunce naughtystep unnaughtystep badge unbadge yellowcard unyellowcard naughtystep unnaughtystep unban guest member moderator owner]` subcommands
  - Added responses and `response` command
+ - Added custom aliases to `cmd alias` subcommand
 
 ## [1.1.0] - 2017-2-16
 ### Fixed
@@ -142,6 +143,11 @@ $(function() {
 			'Clear the chat messages.'
 		],
 		'cmd': [
+			'alias add [NewCommand] [OriginalCommand] - Allows you to add or remove so you can rename an original command to a new one.',
+			'alias remove [NewCommand] - Used to remove an alias.',
+			'alias edit [NewCommand] [OriginalCommand] - Changes the command associated with that alias.',
+			'alias list - Get a list of your current command aliases',
+			'alias clear - Clear your custom alias list',
 			'add [new command] [response to command] - Create a custom command that is accessed the same way normal commands are.',
 			'edit [existing command] [new response to command] - Change an existing custom command',
 			'remove [command name] - Remove a custom command.',
