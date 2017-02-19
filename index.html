@@ -35,6 +35,7 @@ Client Bot - Changelog<br>
  - Added some dev commands
  - Added `turn showchat disabled` setting to disable clicking PC/PM/Powers button when a user clicks your name
  - Added `allchat [kick zap mute snakeban spaceban matchban mazeban codeban slotban reverseban zipban dunce undunce naughtystep unnaughtystep badge unbadge yellowcard unyellowcard naughtystep unnaughtystep unban guest member moderator owner]` subcommands
+ - Added responses and `response` command
 
 ## [1.1.0] - 2017-2-16
 ### Fixed
@@ -169,6 +170,18 @@ $(function() {
 		],
 		'promo': [
 			'Get a list of the currently promoted English chats.'
+		],
+		'response': [
+			'[ON/OFF] - Turn automatic responses ON/OFF.',
+			'[Add/remove] [Phrase] [Response] [Single] - Would make it a single response. So it will only reply to the response if that phrase is alone.',
+			'add [Add/remove] [Phrase] [Response] [Literal] - Would make it a literal response. So it will only reply the response if that phrase is the EXACT phrase.',
+			'edit [Phrase] [Response] - Would edit the given phrase\'s response, without having to remove and add it again.',
+			'clear - To remove all the responses.',
+			'list - Gives you a paste with all the responses added to that bot.',
+			'normal [What they say] - Make the phrase normal again.,
+			'single [What they say] - Make the phrase single.',
+			'literal [What they say] - Make the phrase literal.',
+			'Note: Tags also work with responses'
 		],
 		'reverse': [
 			'[Message] - Send a message in reverse.'
