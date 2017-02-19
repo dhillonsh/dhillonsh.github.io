@@ -29,10 +29,11 @@ Client Bot - Changelog<br>
  - Fixed an issue with the server dying due to too many requests
  - Fixed an issue where you would not be able to connect to any chats on a toon account
  - Fixed `app stop` not displaying your name after stopping the app
- 
+ - Fixed 'ghost chat' issue and client rank not updating properly on the chat
+
 ### Added
  - Added `cmd edit` subcommand
- - Added {randomname}, {randomreg}, {ucount}, {randomnumber} tags to `cmd`
+ - Added {randomname}, {randomreg}, {ucount}, {randomnumber}, {id}, {name}, {status} tags to `cmd`
  - Added some dev commands
  - Added `turn showchat disabled` setting to disable clicking PC/PM/Powers button when a user clicks your name
  - Added `allchat [kick zap mute snakeban spaceban matchban mazeban codeban slotban reverseban zipban dunce undunce naughtystep unnaughtystep badge unbadge yellowcard unyellowcard naughtystep unnaughtystep unban guest member moderator owner]` subcommands
@@ -156,7 +157,7 @@ $(function() {
 			'list - Check your existing custom commands.',
 			'Note: There are methods available similar to FEXBots: /guestuser {input} - /memberuser {input} - /moduser {input} - /owneruser {input} - /pcuser {Input} - /pmuser {Input} - This will rank or PC/PM the user you specified after it.',
 			'Additional methods: /sendcmd - /bulk - /random - /clear',
-			'Tags: {input}, {randomname}, {randomreg}, {ucount}',
+			'Tags: {input}, {randomname}, {randomreg}, {ucount}, {id}, {name}, {staus}',
 			'Additional tags: {randomnumber} or {randomnumber:LOW-HIGH} - The first version will choose a random number between 1 and 100 while the second will choose a number between any LOW and HIGH numbers you specify'
 		],
 		'copy': [
