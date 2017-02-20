@@ -20,7 +20,8 @@ Client Bot - Changelog<br>
 <textarea style="height: 100%; width: 50%">
 ## [x.x.x]
 ###Changed
-	
+ - Moved `smilies` command to `turn smilies`
+
 ### Fixed
 	
 ### Added
@@ -216,9 +217,6 @@ $(function() {
 		'site': [
 			'site - Returns the address to this URL.'
 		],
-		'smilies': [
-			'[ON/OFF] - When disabled, smilies in the format of (cool) will be shown as [cool] (Reduces lag).'
-		],
 		'spoofmessage': [
 			'[USER] [Message] - Receive a spoofed message from a user.'
 		],
@@ -237,11 +235,14 @@ $(function() {
 			'[Message] - Sets the automatic tickle message that will be sent (VIA PM) when someone tickles you.'
 		],
 		'turn': [
-			'[showchat] [off/all/nofollow/disabled]',
+			'[showchat/smilies]',
+			'showchat [off/all/nofollow/disabled]',
 			'showchat off - Reverts to the default message xat will show when a user clicks you.',
 			'showchat all - Will display the message "has you added as a friend and is online at ..." when any user clicks you. All users will appear to be added as your friends.',
 			'showchat nofollow - Will display "NoFollow" whenever any user clicks you.',
-			'showchat disabled - Will disable the PC/PM/Powers buttons and not show anything for your friend status when a user clicks you.'
+			'showchat disabled - Will disable the PC/PM/Powers buttons and not show anything for your friend status when a user clicks you.',
+			'smilies [ON/OFF] - When disabled, smilies in the format of (cool) will be shown as [cool] (Reduces lag).'
+		
 		],
 		'pgo': [
 			'[ON/OFF] - Turn ON/OFF PGO Autocatching',
