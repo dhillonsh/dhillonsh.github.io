@@ -30,6 +30,7 @@ Client Bot - Changelog<br>
 ### Added
  - Added /pm and /pc tags which will use the id of the person who triggers the response
  - Added `tickleresponse delay` subcommand
+ - Added `response delay` subcommand
 
 ## [1.2.0] - 2017-2-19
 ### Changed
@@ -197,6 +198,7 @@ $(function() {
 		],
 		'response': [
 			'[ON/OFF] - Turn automatic responses ON/OFF.',
+			'delay [Time in seconds] - Send at most 1 response message every `delay` seconds. Set it to 0 to always send your automatic responses when triggered.',
 			'[Add/remove] [Phrase] [Response] [Single] - Would make it a single response. So it will only reply to the response if that phrase is alone.',
 			'add [Add/remove] [Phrase] [Response] [Literal] - Would make it a literal response. So it will only reply the response if that phrase is the EXACT phrase.',
 			'edit [Phrase] [Response] - Would edit the given phrase\'s response, without having to remove and add it again.',
