@@ -298,7 +298,14 @@ $(function() {
 				commandsList[commandName][index] = commandsList[commandName][index].substring(8);
 				color = 'red';
 			}
-			if(commandsList[commandName][index].substring(0,5) != 'Note:' && commandsList[commandName][index].substring(0,8) != 'Example:') commandsList[commandName][index] = '<span style="color:' + color + '">' + commandName + " " + commandsList[commandName][index] + '</span>';
+			if(commandsList[commandName][index].substring(0,5) == 'Note:') {
+				color = 'blue';
+				commandsList[commandName][index] = '<span style="color:' + color + '">' + commandsList[commandName][index] + '</span>';
+			}
+			else if commandsList[commandName][index].substring(0,8) == 'Example:') {
+				color = 'orange';
+				commandsList[commandName][index] = '<span style="color:' + color + '">' + commandsList[commandName][index] + '</span>';
+			} else commandsList[commandName][index] = '<span style="color:' + color + '">' + commandName + " " + commandsList[commandName][index] + '</span>';
 		}
 		var htmlContent = '<tr rowspan="5"><td>' + commandName + '</td>';
 		htmlContent += '<td>' + commandsList[commandName].join('<br>') + '</td>';
