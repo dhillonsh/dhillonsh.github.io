@@ -26,11 +26,13 @@ Client Bot - Changelog<br>
  - Fixed {random} tags not generating random results on repeated usage
  - Fixed an issue with responses/custom commands not executing tag commands if a smilie was first in the response
  - Fixed tickle response not showing usage and being case sensitive for on/off switch
-	
+ - Fixed clients not updating when changing settings. It would require you to rejoin the chat for any updates to show
+
 ### Added
  - Added /pm and /pc tags which will use the id of the person who triggers the response
  - Added `tickleresponse delay` subcommand
  - Added `response delay` subcommand
+ - Added `self [pc/pc]` command to send yourself PCs/PMs
 
 ## [1.2.0] - 2017-2-19
 ### Changed
@@ -211,6 +213,9 @@ $(function() {
 		],
 		'reverse': [
 			'[Message] - Send a message in reverse.'
+		],
+		'self': [
+			'[pc/pm] [Message] - Send yourself a PC/PM.'
 		],
 		'setuname': [
 			'[USER] [New Name] - Change a user\'s display name in the chat.'
