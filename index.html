@@ -302,7 +302,7 @@ $(function() {
 				color = 'blue';
 				commandsList[commandName][index] = '<span style="color:' + color + '">' + commandsList[commandName][index] + '</span>';
 			}
-			else if commandsList[commandName][index].substring(0,8) == 'Example:') {
+			else if(commandsList[commandName][index].substring(0,8) == 'Example:') {
 				color = 'orange';
 				commandsList[commandName][index] = '<span style="color:' + color + '">' + commandsList[commandName][index] + '</span>';
 			} else commandsList[commandName][index] = '<span style="color:' + color + '">' + commandName + " " + commandsList[commandName][index] + '</span>';
