@@ -36,6 +36,7 @@ Client Bot - Changelog<br>
  - Added `self [pc/pc]` command to send yourself PCs/PMs
  - Added `ignore [list/clear]` subcommands and allowed adding users not currently in the chat
  - Added `setall` command to modify display settings of all users in the chat
+ - Added `automember` command
 
 ## [1.2.0] - 2017-2-19
 ### Changed
@@ -159,8 +160,8 @@ $(function() {
 			'add [USER]- Add a user to be autokicked when they join the room. Note: they must be in the room.',
 			'remove [USER] - Remove a user from the autokick list.'
 		],
-		'pawn': [
-			'[away/typing] [ON/OFF] - Turn the specified pawn on or off.'
+		'automember': [
+			'[all/register/subscriber/off] - Automatically member users that join the chat.'	
 		],
 		'clear': [
 			'Clear the chat messages.'
@@ -194,6 +195,10 @@ $(function() {
 		],
 		'ignore': [
 			'[add/remove/list/clear] [USER] - Add or remove a user from the ignore list.'
+		],
+		'pawn': [
+			'[away/typing] [ON/OFF] - Turn the specified pawn on or off.',
+			'Note: Currently Disabled'
 		],
 		'pcalc': [
 			'[Power ID] - Calculate the section and subid of a power.'
@@ -286,7 +291,7 @@ $(function() {
 	
 	for(var commandName in commandsList) {
 		for(var index = 0; index < commandsList[commandName].length; index++) {
-			if(commandsList[commandName][index].substring(0,5) != 'Note:') commandsList[commandName][index] = commandName + " " + commandsList[commandName][index];
+			if(commandsList[commandName][index].substring(0,5) != 'Note:' && commandsList[commandName][index].substring(0,8) != 'Example:') commandsList[commandName][index] = commandName + " " + commandsList[commandName][index];
 		}
 		var htmlContent = '<tr><td>' + commandName + '</td>';
 		htmlContent += '<td>' + commandsList[commandName].join('<br>') + '</td>';
