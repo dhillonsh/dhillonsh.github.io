@@ -35,6 +35,7 @@ Client Bot - Changelog<br>
  - Added `response delay` subcommand
  - Added `self [pc/pc]` command to send yourself PCs/PMs
  - Added `ignore [list/clear]` subcommands and allowed adding users not currently in the chat
+ - Added `setall` command to modify display settings of all users in the chat
 
 ## [1.2.0] - 2017-2-19
 ### Changed
@@ -218,6 +219,17 @@ $(function() {
 		],
 		'self': [
 			'[pc/pm] [Message] - Send yourself a PC/PM.'
+		],
+		'setall': [
+			'[name/home/avatar/status] - Change the appearance of all users in the chat. Note you can use tags with these.',
+			'Note: to change every users display name to their regname, use: setall name {regname}',
+			'power [on/off/default] - Change power settings for all users',
+			'power [on/off] list - List the powers currently enabled/disabled for all users.',
+			'power on [power1 power2 etc] - Activate the powers `power1 power2 etc` for all users in the chat. Separate multiple powers with a space. This will make it seem like every user in the chat has those power.',
+			'Example: setall power on gold - This will give everyone in the chat gold power even if they don\'t have it.',
+			'power off [power1 power2 etc] - Deactivate the powers `power1 pwoer2 etc` for all users in the chat. Separate multiple powers with a space. This will make it seem like no user in the chat has those powers.',
+			'Example: setall power off big - This will remove the power (big) for every user in the chat.',
+			'power default [power1 power2 etc] - This will defaul the powers list and they will be activated/deactivated based on if the user has them or not. This essentially undoes any previous changes.'
 		],
 		'setuname': [
 			'[USER] [New Name] - Change a user\'s display name in the chat.'
