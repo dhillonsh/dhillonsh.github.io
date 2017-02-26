@@ -27,12 +27,14 @@ Client Bot - Changelog<br>
  - Fixed an issue with responses/custom commands not executing tag commands if a smilie was first in the response
  - Fixed tickle response not showing usage and being case sensitive for on/off switch
  - Fixed clients not updating when changing settings. It would require you to rejoin the chat for any updates to show
+ - Fixed `ignore` not storing in database, so the ignore list would get cleared anytime you left the chat
 
 ### Added
  - Added /pm and /pc tags which will use the id of the person who triggers the response
  - Added `tickleresponse delay` subcommand
  - Added `response delay` subcommand
  - Added `self [pc/pc]` command to send yourself PCs/PMs
+ - Added `ignore [list/clear]` subcommands and allowed adding users not currently in the chat
 
 ## [1.2.0] - 2017-2-19
 ### Changed
@@ -190,7 +192,7 @@ $(function() {
 			'[Search] - Search on google and return the results.',
 		],
 		'ignore': [
-			'[add/remove] [USER] - Add or remove a user from the ignore list'
+			'[add/remove/list/clear] [USER] - Add or remove a user from the ignore list.'
 		],
 		'pcalc': [
 			'[Power ID] - Calculate the section and subid of a power.'
