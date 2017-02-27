@@ -39,6 +39,7 @@ Client Bot - Changelog<br>
  - Added `ignore [list/clear]` subcommands and allowed adding users not currently in the chat
  - Added `setall` command to modify display settings of all users in the chat
  - Added `automember` command
+ - Added `customPlugin` command
 
 ## [1.2.0] - 2017-2-19
 ### Changed
@@ -188,6 +189,16 @@ $(function() {
 			'[regname/id] - Copies the user\'s name/status/homepage.',
 			'uncopy - Return back to your original name.',
 			'Note:  Your name will not appear to be changed on your screen but everyone else will see your copied name. But you will see a new fake user appear in the chat on the xat (42) account with a black pawn. This user will show you what everyone else sees as your name.'
+		],
+		'customplugin': [
+			'[on/off] - Turn on/off custom plugin functionality.',
+			'add [Time in minutes] [Message/Command]. The custom plugin will send once every `time` minutes (time must be greater than 10 minutes).',
+			'Example: To send the message `hi there` every 15 minutes: @customplugin 15 hi there',
+			'Example: To send the command `allchat badge` every 10 minutes: @customplugin 10 @allchat badge',
+			'remove [Plugin index]. To get the plugin index, use customplugin list (it will be the number inside []).',
+			'time [Plugin index] [New time]. To get the plugin index, use customplugin list (it will be the number inside []). Time is in minutes and must be greater than 10 minutes. Set the time to 0 if you want to disable that custom plugin',
+			'list - List your current custom plugins',
+			'clear - Clear your entire custom plugin list'
 		],
 		'fake42': [
 			'Brings a fake xat (42) account to the room. Note: Pointless.'
