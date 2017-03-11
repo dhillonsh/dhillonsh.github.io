@@ -21,6 +21,11 @@ Client Bot - Changelog<br>
 ## [1.4.0] - ???
 ###Fixed
  - Fixed `setuname` command. Had left some debug code in there on accident
+ - Fixed `setall powers` subcommand not updating powers properly
+
+###Added
+ - Added `setall powers [on/off] clear` subcommand to clear the entire powers on/off lists
+ - Added `setall powers [on/off] all` subcommand to add all powers to the on/off lists
 
 ## [1.3.0] - 2017-2-26
 ###Changed
@@ -247,12 +252,15 @@ $(function() {
 			'Note: to change every users display name to their regname, use: setall name {regname}',
 			'power [on/off/default] - Change power settings for all users',
 			'power [on/off] list - List the powers currently enabled/disabled for all users.',
+			'power [on/off] clear - Clear the entire powers on/off lists',
 			'power on [power1 power2 etc] - Activate the powers `power1 power2 etc` for all users in the chat. Separate multiple powers with a space. This will make it seem like every user in the chat has those power.',
+			'power on all - Activate all powers for all users in the chat',
 			'Example: setall power on gold - This will give everyone in the chat gold power even if they don\'t have it.',
 			'power off [power1 power2 etc] - Deactivate the powers `power1 pwoer2 etc` for all users in the chat. Separate multiple powers with a space. This will make it seem like no user in the chat has those powers.',
+			'power off all - Deactivate all powers for all users in the chat',
 			'Example: setall power off big - This will remove the power (big) for every user in the chat.',
 			'power default [power1 power2 etc] - This will defaul the powers list and they will be activated/deactivated based on if the user has them or not. This essentially undoes any previous changes.',
-			'Note: Anytime you use a `setall` command, you tickle every person in the room.'
+			'Note: Anytime you use a `setall` command, except for powers, you tickle every person in the room. You must rejoin the chat after using `setall powers` commands.'
 		],
 		'setuname': [
 			'[USER] [New Name] - Change a user\'s display name in the chat.'
