@@ -18,7 +18,11 @@ Client Bot - Commands
 <span>
 Client Bot - Changelog<br>
 <textarea style="height: 100%; width: 50%">
-## [1.4.0] - 2017-7-3
+## [???] - ????-??-??
+###Added
+ - Added the ability to use more than 2 apps with `app` command	
+	
+## [1.4.0] - 2017-07-03
 ###Fixed
  - Fixed `setuname` command. Had left some debug code in there on accident
  - Fixed `setall powers` subcommand not updating powers properly
@@ -34,7 +38,7 @@ Client Bot - Changelog<br>
  - Using `copy` and `copy uncopy` will now make you automatically rejoin the chat to show the updates
  - Using `setall powers` command will now make you automatically rejoin the chat to show the updates
 	
-## [1.3.0] - 2017-2-26
+## [1.3.0] - 2017-02-26
 ###Changed
  - Moved `smilies` command to `turn smilies`
  - Disabled `app flash`. Even though I believe everything should be used at user discretion, I won't support abuse of my client.
@@ -57,7 +61,7 @@ Client Bot - Changelog<br>
  - Added `automember` command
  - Added `customPlugin` command
 
-## [1.2.0] - 2017-2-19
+## [1.2.0] - 2017-02-19
 ### Changed
  - Modified `cmd` command to prevent adding commands with the same name as default commands
  - Disabled `pawn` command as it does not work. May be permanently disabled
@@ -81,7 +85,7 @@ Client Bot - Changelog<br>
  - Added custom aliases to `cmd alias` subcommand
  - Added default responses if improper use of command for: spoofmessage, spoofpc, setuname
 
-## [1.1.0] - 2017-2-16
+## [1.1.0] - 2017-02-16
 ### Fixed
  - Fixed some links from the `youtube` command not sending due to character encoding issues
  - Fixed messages not appearing in chat if they contained a '&' character.
@@ -97,7 +101,7 @@ Client Bot - Changelog<br>
  - Added custom commands `cmd
  - Added `allchat` command
 
-## [1.0.0] - 2017-2-11
+## [1.0.0] - 2017-02-11
 ### Summary
  - Released new client
 
@@ -172,7 +176,7 @@ $(function() {
 		'app': [
 			'stop - Clears the current app, removing the (>NUMBER) from your name.',
 			'[NUMBER] - Opens the app with that NUMBER. It will be displayed on the userlist like: (>NUMBER) Mobster. Note: The number must be large enough (~6 digits) for it to appear on the userlist.',
-			'[NUMBER1] [NUMBER2] [Optional: Delay time in milliseconds] - Cycles your app number between NUMBER1 and NUMBER2. Your name will appear on the userlist as: (>NUMBER1) Mobster, then after a brief second, it will change to: (>NUMBER2) Mobster, and then repeat from there.',
+			'[Delay time in milliseconds | Use 0 for the default] [NUMBER1] [NUMBER2] [NUMBER3] [etc..] - Cycles your app number between all the numbers you specify (no limit). Your name will appear on the userlist as: (>NUMBER1) Mobster, then after a brief second, it will change to: (>NUMBER2) Mobster, etc and then start back from the beginning.',
 			'DISABLEDflash - Flashes the chat.'
 		],
 		'autokick': [
