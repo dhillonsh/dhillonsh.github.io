@@ -22,6 +22,7 @@ Client Bot - Changelog<br>
 ###Added
  - Added `cmd check [key]` sub command to check an existing cmd key
  - Added default aliases for a few commands
+ - Added `turn showchat notadded` to always show "Not added as a friend" when tickled, even if you are their friend
 
 ## [1.4.1] - 2017-07-07
 ###Fixed
@@ -316,11 +317,12 @@ $(function() {
 		],
 		'turn': [
 			'[showchat/smilies]',
-			'showchat [off/all/nofollow/disabled]',
+			'showchat [off/all/nofollow/disabled/notadded]',
 			'showchat off - Reverts to the default message xat will show when a user clicks you.',
 			'showchat all - Will display the message "has you added as a friend and is online at ..." when any user clicks you. All users will appear to be added as your friends.',
 			'showchat nofollow - Will display "NoFollow" whenever any user clicks you.',
 			'showchat disabled - Will disable the PC/PM/Powers buttons and not show anything for your friend status when a user clicks you.',
+			'showchat notadded - Will always display "Not added as a friend" whenever any user clicks you, even if they are your friend.',
 			'smilies [ON/OFF] - When disabled, smilies in the format of (cool) will be shown as [cool] (Reduces lag).'
 		
 		],
