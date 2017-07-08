@@ -18,6 +18,10 @@ Client Bot - Commands
 <span>
 Client Bot - Changelog<br>
 <textarea style="height: 100%; width: 50%">
+## [?.?.?] - ????-??-??
+###Added
+ - Added `cmd check [key]` sub command to check an existing cmd key
+
 ## [1.4.1] - 2017-07-07
 ###Fixed
  - Fixed `pawn [away/typing]` not working due to having parts disabled
@@ -203,6 +207,7 @@ $(function() {
 			'edit [existing command] [new response to command] - Change an existing custom command',
 			'remove [command name] - Remove a custom command.',
 			'list - Check your existing custom commands.',
+			'check - Checks if the cmd is found as an custom command, default command, or alias.',
 			'Note: There are methods available similar to FEXBots: /guestuser {input} - /memberuser {input} - /moduser {input} - /owneruser {input} - /pcuser {Input} - /pmuser {Input} - This will rank or PC/PM the user you specified after it.',
 			'Additional methods: /pc {input} - /pm {input} - These will use the id of the person who triggers the command/response',
 			'Additional methods: /sendcmd - /bulk - /random - /clear',
