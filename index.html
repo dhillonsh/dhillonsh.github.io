@@ -24,7 +24,8 @@ Client Bot - Changelog<br>
 
 ###Added
  - Added the ability to use more than 2 apps with `app` command	
-	
+ - Added `response check [key]` sub command to check an existing response key
+
 ## [1.4.0] - 2017-07-03
 ###Fixed
  - Fixed `setuname` command. Had left some debug code in there on accident
@@ -251,6 +252,7 @@ $(function() {
 			'edit [Phrase] [Response] - Would edit the given phrase\'s response, without having to remove and add it again.',
 			'clear - To remove all the responses.',
 			'list - Gives you a paste with all the responses added to that bot.',
+			'check - Checks if the response is found.',
 			'normal [What they say] - Make the phrase normal again.',
 			'single [What they say] - Make the phrase single.',
 			'literal [What they say] - Make the phrase literal.',
