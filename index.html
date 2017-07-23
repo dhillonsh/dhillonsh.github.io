@@ -20,6 +20,7 @@ Client Bot - Changelog<br>
 <textarea style="height: 100%; width: 50%">
 ## [1.5.0] - 2017-07-11
 ###Added
+ - Added `commandcode [New command code]` to change the default command code from @
  - Added `cmd check [key]` sub command to check an existing cmd key
  - Added default aliases for a few commands
  - Added `turn showchat notadded` to always show "Not added as a friend" when tickled, even if you are their friend
@@ -199,6 +200,9 @@ $(function() {
 		],
 		'automember': [
 			'[all/register/subscriber/off] - Automatically member users that join the chat.'	
+		],
+		'commandcode': [
+			'[New command code] - Change the default command code from @. This is what you type before using commands.'
 		],
 		'clear': [
 			'Clear the chat messages.'
