@@ -18,7 +18,7 @@ Client Bot - Commands
 <span>
 Client Bot - Changelog<br>
 <textarea style="height: 100%; width: 50%">
-## [?.?.?] - ????-??-??
+## [1.6.0] - 2017-07-26
 ###Added
  - Added `mimic` command to automatically copy messages sent by another user
  - Added `group [announce, gscol, gline, links]` command to set custom settings for all chats
@@ -255,10 +255,17 @@ $(function() {
 		],
 		'google': [
 			'maxresults [Maximum results] - Set the maximum results to return when using the `google` command. Default is 3.',
-			'[Search] - Search on google and return the results.',
+			'[Search] - Search on google and return the results.'
+		],
+		'group': [
+			'[announce, gscol, gline, links] - Set the group powers to whatever you want so that you see them when you join a chat.'
 		],
 		'ignore': [
 			'[add/remove/list/clear] [USER] - Add or remove a user from the ignore list.'
+		],
+		'mimic': [
+			'[ID/Regname] - Mimic a user by automatically sending the same messages that they send.',
+			'off - Disable mimicking.'
 		],
 		'pawn': [
 			'[away/typing] [ON/OFF] - Turn the specified pawn on or off.',
